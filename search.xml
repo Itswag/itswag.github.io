@@ -55,8 +55,8 @@
     <url>%2Fposts%2Fb1245755.html</url>
     <content type="text"><![CDATA[问题描述Excel单元格的地址表示很有趣，它使用字母来表示列号。比如，A表示第1列，B表示第2列，Z表示第26列，AA表示第27列，AB表示第28列，BA表示第53列，….当然Excel的最大列号是有限度的，所以转换起来不难。如果我们想把这种表示法一般化，可以把很大的数字转换为很长的字母序列呢？本题目即是要求对输入的数字, 输出其对应的Excel地址表示方式。样例输入26样例输出Z样例输入2054样例输出BZZ代码12345678910111213141516171819202122232425262728#include&lt;stdio.h&gt;int main()&#123; int n, i; int cont = 0; char a[100]; scanf("%d", &amp;n); while (n) &#123; if (n % 26 == 0) &#123; a[cont++] = 26 + 64; n /= 26; n--; &#125; else &#123; a[cont++] = n % 26 + 64; n /= 26; &#125; &#125; for (i = cont - 1; i &gt;= 0; i--) &#123; printf("%c", a[i]); &#125; return 0;&#125;]]></content>
       <tags>
-        <tag>算法</tag>
         <tag>蓝桥杯</tag>
+        <tag>算法</tag>
         <tag>C语言</tag>
       </tags>
   </entry>
